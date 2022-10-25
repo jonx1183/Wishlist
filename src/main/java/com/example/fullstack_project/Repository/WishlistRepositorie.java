@@ -18,7 +18,7 @@ public class WishlistRepositorie {
     List<Wishlist> wishlist = new ArrayList<>();
 
     try{
-      PreparedStatement psts = conn.prepareStatement("SELECT * FROM wish");
+      PreparedStatement psts = conn.prepareStatement("SELECT * FROM wish.wishliste");
       ResultSet resultSet = psts.executeQuery();
 
       while(resultSet.next()){
@@ -46,6 +46,18 @@ try {
 }
 return null;
   }
+
+public void createWishlist(Wishlist wishlist){
+    try{
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO wish.wishliste (id, name) VALUES (?,?)");
+      psts.setInt(1,wishlist.getId());
+      psts.setString(2, wishlist.getName());
+      psts.executeQuery();
+    }catch (SQLException e){
+      System.out.println("Error at createWishlist");
+      e.printStackTrace();
+    }
+}
 
 
 }
