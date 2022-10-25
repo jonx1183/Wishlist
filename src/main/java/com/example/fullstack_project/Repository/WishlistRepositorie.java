@@ -37,7 +37,7 @@ public class WishlistRepositorie {
 
 public Wishlist getWishlist(int id){
 try {
-  PreparedStatement psts = conn.prepareStatement("SELECT * FROM Fullstack WHERE id =?");
+  PreparedStatement psts = conn.prepareStatement("SELECT * FROM wish.wishliste WHERE id =?");
   psts.setInt(1,id);
   ResultSet resultSet = psts.executeQuery();
 }catch (SQLException e){

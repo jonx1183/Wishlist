@@ -20,9 +20,12 @@ public class WishlistService {
 
   }
 
+
   public void wishlist(WebRequest req) {
-    String name;
-    int id;
+    Wishlist wishlist2 = new Wishlist(req.getParameter("name"));
+
+
+    repo.createWishlist(wishlist2);
   }
 
 }
