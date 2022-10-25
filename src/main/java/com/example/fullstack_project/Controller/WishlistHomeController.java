@@ -12,7 +12,7 @@ public class WishlistHomeController {
 
   private WishlistService service = new WishlistService();
 
-  @GetMapping("/wishlist2")
+  @GetMapping("/wishlist")
   public String index() {
     return "index";
   }
