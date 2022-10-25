@@ -18,10 +18,12 @@ public class WishlistHomeController {
   }
 
   @PostMapping("/wishlist")
-  public void wishlist(WebRequest req) {
-    service.wishlist(req);
-    System.out.println(req.getParameter("id"));
-    System.out.println(req.getParameter("name"));
+  public String wishlist(WebRequest payload) {
+    service.wishlist(payload);
+    //System.out.println(req.getParameter("id"));
+    //System.out.println(req.getParameter("name"));
+
+    return ("redirect:/");
 
   }
 }
