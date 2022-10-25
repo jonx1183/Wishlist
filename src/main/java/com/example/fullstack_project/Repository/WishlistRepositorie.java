@@ -52,7 +52,7 @@ public void createWishlist(Wishlist wishlist){
       PreparedStatement psts = conn.prepareStatement("INSERT INTO wish.wishliste (id, name) VALUES (?,?)");
       psts.setInt(1,wishlist.getId());
       psts.setString(2, wishlist.getName());
-      psts.executeQuery();
+      psts.executeUpdate();
     }catch (SQLException e){
       System.out.println("Error at createWishlist");
       e.printStackTrace();
