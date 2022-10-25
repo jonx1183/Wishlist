@@ -10,14 +10,14 @@ import org.springframework.web.context.request.WebRequest;
 @Controller
 public class WishlistHomeController {
 
-  WishlistService service = new WishlistService();
+  private WishlistService service = new WishlistService();
 
-  @GetMapping("/wishlist")
+  @GetMapping("/wishlist2")
   public String index() {
     return "index";
   }
 
-  @PostMapping("/wishlist")
+  @PostMapping("/wishlist2")
   public void wishlist(WebRequest req) {
     service.wishlist(req);
     System.out.println(req.getParameter("id"));
