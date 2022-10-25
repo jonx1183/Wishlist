@@ -17,7 +17,7 @@ public class WishlistHomeController {
     return "index";
   }
 
-  @PostMapping("/wishlist2")
+  @PostMapping("/wishlist")
   public void wishlist(WebRequest req) {
     service.wishlist(req);
     System.out.println(req.getParameter("id"));

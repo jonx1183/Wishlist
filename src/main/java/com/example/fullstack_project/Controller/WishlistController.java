@@ -21,7 +21,7 @@ public class WishlistController {
 
   }
 
-  @GetMapping ("wishlist")
+  @GetMapping ("wish")
   public Wishlist getWishlist (int id) {
     return service.getWishlist(id);
   }
