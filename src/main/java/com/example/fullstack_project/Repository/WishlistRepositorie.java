@@ -59,5 +59,9 @@ public void createWishlist(Wishlist wishlist){
     }
 }
 
+/*Potensiel delete metode
+  public void delete wishList(){
 
+  }
+  */
 }
