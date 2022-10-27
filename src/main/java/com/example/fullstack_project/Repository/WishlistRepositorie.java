@@ -24,9 +24,11 @@ public class WishlistRepositorie {
       while(resultSet.next()){
         wishlist.add(new Wishlist(
             resultSet.getInt("id"),
-            resultSet.getString("name")
-        ));
-      }
+            resultSet.getString("name"),
+            resultSet.getString("name2"),
+            resultSet.getString("name3"),
+            resultSet.getString("name4")));
+              }
 
     }catch (SQLException e){
       System.out.println("Error at getAllWishlists");
@@ -57,11 +59,7 @@ public void createWishlist(Wishlist wishlist){
       System.out.println("Error at createWishlist");
       e.printStackTrace();
     }
-}
 
-/*Potensiel delete metode
-  public void delete wishList(){
+ }
 
-  }
-  */
 }

@@ -8,3 +8,4 @@ CREATE TABLE wishliste
     PRIMARY KEY (id)
 
 );
+DROP TABLE wishliste;

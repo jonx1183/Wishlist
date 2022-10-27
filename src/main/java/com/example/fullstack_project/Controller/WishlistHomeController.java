@@ -21,7 +21,7 @@ public class WishlistHomeController {
   public String wishlist(WebRequest payload) {
     service.wishlist(payload);
     //System.out.println(req.getParameter("id"));
-    //System.out.println(req.getParameter("name"));
+    //System.out.println(payload.getParameter("name"));
 
     return ("redirect:/");
 

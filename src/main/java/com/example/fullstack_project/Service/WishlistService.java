@@ -22,7 +22,10 @@ public class WishlistService {
 
 
   public void wishlist(WebRequest req) {
-    Wishlist wishlist2 = new Wishlist(req.getParameter("name"));
+    Wishlist wishlist2 = new Wishlist(req.getParameter("name"),
+        req.getParameter("name2"),
+        req.getParameter("name3"),
+        req.getParameter("name4"));
 
 
     repo.createWishlist(wishlist2);
