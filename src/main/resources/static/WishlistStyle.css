@@ -3,4 +3,4 @@ body{
 }
 #divWish{text-align: center;height: 1500px; width: 2700px}
 #actionDiv{background-color: lightblue}
-
+#ShareDiv{position: fixed; bottom: 1000px}
