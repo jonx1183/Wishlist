@@ -51,9 +51,12 @@ return null;
 
 public void createWishlist(Wishlist wishlist){
     try{
-      PreparedStatement psts = conn.prepareStatement("INSERT INTO wish.wishliste (id, name) VALUES (?,?)");
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO wish.wishliste (id,name,name2,name3,name4) VALUES (?,?,?,?,?)");
       psts.setInt(1,wishlist.getId());
       psts.setString(2, wishlist.getName());
+      psts.setString(3, wishlist.getName2());
+      psts.setString(4, wishlist.getName3());
+      psts.setString(5, wishlist.getName4());
       psts.executeUpdate();
     }catch (SQLException e){
       System.out.println("Error at createWishlist");
